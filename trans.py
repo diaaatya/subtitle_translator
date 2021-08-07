@@ -28,7 +28,7 @@ def translate(subtitle):
 
 translated = []
 finished = False
-with open("shawshank-eng.srt") as f:
+with open("<YOUR INPUT FILE HERE>") as f:
     for line in f:
         if line[0:1].lower() in "abcdefghijklmnopqrstuvwxyz":
             line = translate(line.replace("\n", " "))
@@ -39,7 +39,7 @@ with open("shawshank-eng.srt") as f:
     finished = True
 
 if finished:
-    with open("shawshank-ar", "w", encoding="utf-8") as f:
+    with open("<YOUR OUT PUT FILE HERE>", "w", encoding="utf-8") as f:
         for line in translated:
             line.encode("utf-8")
             f.write(line)
